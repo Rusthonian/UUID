@@ -1,0 +1,45 @@
+[build-system]
+requires = ["maturin>=1.4,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "rusthonian-uuid"
+requires-python = ">=3.8"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Rust",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: System :: Distributed Computing",
+]
+dynamic = ["version"]
+description = "Python bindings for the Rust UUID crate via Rusthonian"
+readme = "README.md"
+license = {text = "MIT OR Apache-2.0"}
+authors = [
+    {name = "Rusthonian", email = "contact@rusthonian.org"}
+]
+maintainers = [
+    {name = "Rusthonian", email = "contact@rusthonian.org"}
+]
+keywords = ["uuid", "python", "bindings", "rusthonian", "rust"]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/Rusthonian/UUID"
+Documentation = "https://github.com/Rusthonian/UUID#readme"
+Repository = "https://github.com/Rusthonian/UUID"
+"Bug Tracker" = "https://github.com/Rusthonian/UUID/issues"
+
+[tool.maturin]
+features = ["pyo3/extension-module"]
+module-name = "rusthonian_uuid"
