@@ -3,8 +3,14 @@ Comprehensive test suite for rusthonian_uuid module
 Tests 100% coverage of the Rust uuid crate bindings
 """
 
-import rusthonian_uuid as uuid_mod
 import sys
+
+# Try to import from Rusthonian package
+try:
+    from Rusthonian import uuid as uuid_mod
+except ImportError:
+    # Fallback to standalone rusthonian_uuid if available
+    import rusthonian_uuid as uuid_mod
 
 def test_basic_generation():
     """Test all UUID generation methods"""
